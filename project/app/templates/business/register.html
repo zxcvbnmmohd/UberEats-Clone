@@ -1,0 +1,20 @@
+{% extends 'business/base_auth.html' %}
+{% load bootstrap4 %}
+
+{% block title %}Register{% endblock %}
+
+{% block heading %}Business - Register{% endblock %}
+
+{% block content %}
+	<form action="" method="post" enctype="multipart/form-data">
+		{% csrf_token %} 
+		{% bootstrap_form user_form %}
+		{% bootstrap_form business_form %}
+		
+		<button type="submit" class="btn btn-black btn-block">Register a new account</button>
+	</form>
+
+	<div class="text-center mt-3">
+		<a href="{% url 'business_login' %}">Already have an account</a>
+	</div>
+{% endblock %}

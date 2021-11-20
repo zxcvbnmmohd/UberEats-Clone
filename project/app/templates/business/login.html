@@ -1,15 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Login | UberEats | Python, Django + PostgreSQL</title>
-</head>
-<body>
-    <form method="post" action="">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">Login</button>
-</body>
-</html>
+{% extends 'business/base_auth.html' %}
+{% load bootstrap4 %}
+
+{% block title %}Sign In{% endblock %}
+
+{% block heading %}Business - Login{% endblock %}
+
+{% block content %}
+	<form action="" method="post">
+		{% csrf_token %}
+		{% bootstrap_form form %} 
+
+		<button type="submit" class="btn btn-black btn-block">Login</button>
+
+		<div class="text-center mt-3">
+			<a href="{% url 'business_register' %}">Register as a Business</a>
+		</div>
+	</form>
+{% endblock %}
+
+
