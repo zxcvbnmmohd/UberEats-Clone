@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UberEats | Python, Django + PostgreSQL</title>
+    <title>Business Login | UberEats | Python, Django + PostgreSQL</title>
 </head>
 <body>
-    Home...
+    <form method="post" action="">
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Login</button>
 </body>
 </html>
