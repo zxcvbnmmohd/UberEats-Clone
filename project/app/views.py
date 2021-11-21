@@ -24,16 +24,16 @@ def business_register(request):
 
     if user_form.is_valid() and business_form.is_valid():
         new_user = User.objects.create_user(**user_form.cleaned_data)
-        new_restaurant = business_form.save(commit=False)
-        new_restaurant.user = new_user
-        new_restaurant.save()
+        new_business = business_form.save(commit=False)
+        new_business.user = new_user
+        new_business.save()
 
         login(request, authenticate(
             username=user_form.cleaned_data["username"],
             password=user_form.cleaned_data["password"]
         ))
 
-        return redirect(restaurant_home)
+        return redirect(business_home)
 
     return render(request, 'business/register.html', {
         "user_form": user_form,

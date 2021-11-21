@@ -181,6 +181,5 @@ SOCIAL_AUTH_PIPELINE = (
 
 STRIPE_API_KEY = 'sk_test_51Jy2P0JAzFRh3c78hbxdF5ETjYh5e2AARDplu2TCglynMvMgmUMCh7t2nQsZPVgEfcpbjMICqKzQcafkV6wZAltH00YvZd4rRu'
 
-# Configure Django app for Heroku
-# import django_heroku
-# django_heroku.settings(locals())
+import django_heroku
+django_heroku.settings(locals())
