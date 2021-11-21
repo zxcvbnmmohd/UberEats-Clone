@@ -26,7 +26,14 @@ urlpatterns = [
     path('business/register/', views.business_register, name='business_register'),
     path('business/login/', auth_views.LoginView.as_view(template_name='business/login.html'), name='business_login'),
     path('business/logout/', auth_views.LogoutView.as_view(next_page='business/'), name='business_logout'),
-
+    
+    path('business/account/', views.business_account, name='business_account'),
+    path('business/item/', views.business_item, name='business_item'),
+    path('business/item/add', views.business_add_item, name='business_add_item'),
+    path('business/item/edit/<int:item_id>', views.business_edit_item, name='business_edit_item'),
+    path('business/order/', views.business_order, name='business_order'),
+    path('business/report/', views.business_report, name='business_report'),
+    
     # APIs
     path('api/social', include('rest_framework_social_oauth2.urls')),
 ]
