@@ -25,5 +25,5 @@ urlpatterns = [
     path('business/', views.business_home, name='business_home'),
     path('business/register/', views.business_register, name='business_register'),
     path('business/login/', auth_views.LoginView.as_view(template_name='business/login.html'), name='business_login'),
-    path('business/logout/', auth_views.LogoutView.as_view(next_page='/'), name='business_logout'),
+    path('business/logout/', auth_views.LogoutView.as_view(next_page='business/'), name='business_logout'),
 ]
