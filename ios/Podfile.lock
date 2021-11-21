@@ -1,0 +1,77 @@
+PODS:
+  - Alamofire (5.4.3)
+  - Charts (3.6.0):
+    - Charts/Core (= 3.6.0)
+  - Charts/Core (3.6.0)
+  - DropDown (2.3.13)
+  - FBSDKCoreKit (11.0.1):
+    - FBSDKCoreKit/Core (= 11.0.1)
+  - FBSDKCoreKit/Core (11.0.1):
+    - FBSDKCoreKit_Basics (~> 11.0.1)
+  - FBSDKCoreKit_Basics (11.0.1):
+    - FBSDKCoreKit_Basics/Basics (= 11.0.1)
+  - FBSDKCoreKit_Basics/Basics (11.0.1)
+  - FBSDKLoginKit (11.0.1):
+    - FBSDKLoginKit/Login (= 11.0.1)
+  - FBSDKLoginKit/Login (11.0.1):
+    - FBSDKCoreKit (~> 11.0.1)
+    - FBSDKCoreKit_Basics (~> 11.0.1)
+  - FBSDKShareKit (11.0.1):
+    - FBSDKShareKit/Share (= 11.0.1)
+  - FBSDKShareKit/Share (11.0.1):
+    - FBSDKCoreKit (~> 11.0.1)
+    - FBSDKCoreKit_Basics (~> 11.0.1)
+  - lottie-ios (3.2.3)
+  - SkeletonView (1.21.1)
+  - Stripe (21.7.0):
+    - Stripe/Stripe3DS2 (= 21.7.0)
+    - StripeCore (= 21.7.0)
+  - Stripe/Stripe3DS2 (21.7.0):
+    - StripeCore (= 21.7.0)
+  - StripeCore (21.7.0)
+  - SwiftyJSON (5.0.1)
+
+DEPENDENCIES:
+  - Alamofire (= 5.4.3)
+  - Charts (= 3.6.0)
+  - DropDown (= 2.3.13)
+  - FBSDKCoreKit (= 11.0.1)
+  - FBSDKLoginKit (= 11.0.1)
+  - FBSDKShareKit (= 11.0.1)
+  - lottie-ios (= 3.2.3)
+  - SkeletonView (= 1.21.1)
+  - Stripe (= 21.7.0)
+  - SwiftyJSON (= 5.0.1)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Charts
+    - DropDown
+    - FBSDKCoreKit
+    - FBSDKCoreKit_Basics
+    - FBSDKLoginKit
+    - FBSDKShareKit
+    - lottie-ios
+    - SkeletonView
+    - Stripe
+    - StripeCore
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Charts: b1e3a1f5a1c9ba5394438ca3b91bd8c9076310af
+  DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
+  FBSDKCoreKit: 38c9e29a3f1436362acacff6486d3a28628c288f
+  FBSDKCoreKit_Basics: 06780a4a12e16596bde8406add02c6aa1bf38616
+  FBSDKLoginKit: 8243e04c590c38b85c69fcf09d1234514d2475c3
+  FBSDKShareKit: e55ddcd33d5169597ae86866faffae0acae971c1
+  lottie-ios: c058aeafa76daa4cf64d773554bccc8385d0150e
+  SkeletonView: 5b79eb6e09d2a7f3d2e620d34ff97510a1c763e9
+  Stripe: 90596971ef49bade169f68bc59369a796b30a045
+  StripeCore: c09b492efc3b269a6ff875ad738ca366db97e03b
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
+
+PODFILE CHECKSUM: 8701a73014aa626f04acf2ab89bc9bc568d9829f
+
+COCOAPODS: 1.11.2

@@ -11,22 +11,26 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 from pathlib import Path
+import environ
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+env = environ.Env()
 
+# Set the project base directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Take environment variables from .env file
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&_49o-wbqauln7t%vy52$xzn65!ldnsumkh*2gy2=zr+1bte23'
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -80,11 +84,11 @@ WSGI_APPLICATION = 'project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'UberEatsDB', 
-        'USER': 'postgres', 
-        'PASSWORD': 'ThisisUberEats1!',
-        'HOST': '127.0.0.1', 
-        'PORT': '5432',
+        'NAME': env('DATABASE_NAME'), 
+        'USER': env('DATABASE_USER'), 
+        'PASSWORD': env('DATABASE_PASSWORD'),
+        'HOST': env('DATABASE_HOST'), 
+        'PORT': env('DATABASE_PORT'),
     }
 }
 
@@ -141,9 +145,9 @@ import cloudinary.uploader
 import cloudinary.api
 
 cloudinary.config(
-    cloud_name = "mohp1416",
-    api_key = "316879618734751",
-    api_secret = "yZ-nDu07M3T1DV0yiJ6jl0RdjTw"
+    cloud_name = env('CLOUDINARY_NAME'),
+    api_key = env('CLOUDINARY_API_KEY'),
+    api_secret = env('CLOUDINARY_API_SECRET')
 )
 
 AUTHENTICATION_BACKENDS = (
@@ -152,8 +156,8 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # Facebook configuration
-SOCIAL_AUTH_FACEBOOK_KEY = '709469537111905'
-SOCIAL_AUTH_FACEBOOK_SECRET = '3cad4b8baa46c4efaa6e5bf68dc52af2'
+SOCIAL_AUTH_FACEBOOK_KEY = env('SOCIAL_AUTH_FACEBOOK_KEY')
+SOCIAL_AUTH_FACEBOOK_SECRET = env('SOCIAL_AUTH_FACEBOOK_SECRET')
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id, name, email, picture.type(large)'
@@ -172,7 +176,7 @@ SOCIAL_AUTH_PIPELINE = (
     'social_core.pipeline.user.user_details',
 )
 
-STRIPE_API_KEY = 'sk_test_51Jy2P0JAzFRh3c78hbxdF5ETjYh5e2AARDplu2TCglynMvMgmUMCh7t2nQsZPVgEfcpbjMICqKzQcafkV6wZAltH00YvZd4rRu'
+STRIPE_API_KEY = env('STRIPE_API_KEY')
 
 import django_heroku
 django_heroku.settings(locals())
