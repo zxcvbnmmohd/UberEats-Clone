@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'app',
     'bootstrap4',
     'cloudinary',
+    'social_django',
 ]
 
 MIDDLEWARE = [
@@ -158,11 +159,8 @@ AUTHENTICATION_BACKENDS = (
 )
 
 # Facebook configuration
-SOCIAL_AUTH_FACEBOOK_KEY = 'YOUR_FACEBOOK_APP_ID'
-SOCIAL_AUTH_FACEBOOK_SECRET = 'YOUR_FACEBOOK_APP_SECRET'
-
-# Define SOCIAL_AUTH_FACEBOOK_SCOPE to get extra permissions from Facebook.
-# Email is not sent by default, to get it, you must request the email permission.
+SOCIAL_AUTH_FACEBOOK_KEY = '709469537111905'
+SOCIAL_AUTH_FACEBOOK_SECRET = '3cad4b8baa46c4efaa6e5bf68dc52af2'
 SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
 SOCIAL_AUTH_FACEBOOK_PROFILE_EXTRA_PARAMS = {
     'fields': 'id, name, email, picture.type(large)'
