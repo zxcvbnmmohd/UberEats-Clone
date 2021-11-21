@@ -32,7 +32,7 @@ urlpatterns = [
     path('business/item/add', views.business_add_item, name='business_add_item'),
     path('business/item/edit/<int:item_id>', views.business_edit_item, name='business_edit_item'),
     path('business/order/', views.business_order, name='business_order'),
-    path('business/report/', views.business_report, name='business_report'),
+    path('business/reports/', views.business_reports, name='business_reports'),
     
     # APIs
     path('api/social', include('rest_framework_social_oauth2.urls')),

@@ -1,124 +1,66 @@
-{% extends 'business/layout.html' %} {% block script %}
+{% extends 'business/layout.html' %}
+
+{% block script %}
 
 <script>
-  $(document).ready(function () {
+  $(document).ready(function() {
     var now = new Date();
-    setInterval(function () {
+    setInterval(function() {
       $.ajax({
-        url: "/api/business/order/notification/" + now.toISOString() + "/",
-        method: "GET",
-        success: function (data) {
-          if (data["notification"] === 0) {
-            $(".badge").text("");
+        url: '/api/business/order/notification/' + now.toISOString() + '/',
+        method: 'GET',
+        success: function(data) {
+          if (data['notification'] === 0) {
+            $('.badge').text('');
           } else {
-            $(".badge").text(data["notification"]);
+            $('.badge').text(data['notification']);
           }
-        },
-      });
-    }, 3000);
-  });
+        }
+      })
+    }, 3000)
+  })
 </script>
 
-{% endblock %} {% block sidebar %} {% url 'business_item' as business_item_url
-%} {% url 'business_order' as business_order_url %} {% url 'business_reports' as
-business_reports_url %} {% url 'business_account' as business_account_url %}
+{% endblock %}
+
+
+
+{% block sidebar %}
+
+{% url 'business_item' as business_item_url %}
+{% url 'business_order' as business_order_url %}
+{% url 'business_reports' as business_reports_url %}
+{% url 'business_account' as business_account_url %}
 
 <div class="text-center mt-4">
-  <img
-    src="{{ request.user.business.logo.url }}"
-    class="rounded-circle"
-    width="80"
-    height="80"
-    alt=""
-  />
-  <br /><br />
+  <img src="{{ request.user.business.logo.url }}" class="rounded-circle" width="80" height="80" alt="">
+  <br><br>
   <h5>{{ request.user.get_full_name }}</h5>
   <h6>{{ request.user.business.name }}</h6>
 </div>
 
-<hr />
+<hr>
 
 <div class="list-group">
   <span class="text-uppercase">Dashboard</span>
 
-  <a
-    href="{% url 'business_item' %}"
-    class="
-      list-group-item
-      {%
-      if
-      request.path
-      ==
-      business_item_url
-      %}
-      active
-      {%
-      endif
-      %}
-    "
-    >items</a
-  >
-  <a
-    href="{% url 'business_order' %}"
-    class="
-      list-group-item
-      {%
-      if
-      request.path
-      ==
-      business_order_url
-      %}
-      active
-      {%
-      endif
-      %}
-    "
-  >
+  <a href="{% url 'business_item' %}" 
+    class="list-group-item {% if request.path == business_item_url %} active {% endif %}">Items</a>
+  <a href="{% url 'business_order' %}" 
+    class="list-group-item {% if request.path == business_order_url %} active {% endif %}">
     Orders
     <span class="badge badge-warning ml-2"></span>
   </a>
-  <a
-    href="{% url 'business_reports' %}"
-    class="
-      list-group-item
-      {%
-      if
-      request.path
-      ==
-      business_reports_url
-      %}
-      active
-      {%
-      endif
-      %}
-    "
-    >Reports</a
-  >
+  <a href="{% url 'business_reports' %}" 
+    class="list-group-item {% if request.path == business_reports_url %} active {% endif %}">Report</a>
 
   <span class="text-uppercase">Profile</span>
-  <a
-    href="{% url 'business_account' %}"
-    class="
-      list-group-item
-      {%
-      if
-      request.path
-      ==
-      business_account_url
-      %}
-      active
-      {%
-      endif
-      %}
-    "
-    >Account</a
-  >
+  <a href="{% url 'business_account' %}" 
+    class="list-group-item {% if request.path == business_account_url %} active {% endif %}">Account</a>
 </div>
 
 <div class="text-center my-3 mx-3">
-  <a href="{% url 'business_sign_out' %}" class="btn btn-warning btn-block"
-    >Logout</a
-  >
+  <a href="{% url 'business_logout' %}" class="btn btn-warning btn-block">Logout</a>
 </div>
 
 {% endblock %}
