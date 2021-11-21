@@ -16,9 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
-from app import views
+from app import views, apis
 
 urlpatterns = [
+    # Paths
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),
     
@@ -36,4 +37,24 @@ urlpatterns = [
     
     # APIs
     path('api/social', include('rest_framework_social_oauth2.urls')),
+    path('api/business/order/notification/<last_request_time>/', apis.business_order_notification),
+    
+     # APIS for CUSTOMERS
+    path('api/customer/businesses/', apis.customer_get_businesses),
+    path('api/customer/items/<int:business_id>', apis.customer_get_items),
+    path('api/customer/order/add/', apis.customer_add_order),
+    path('api/customer/order/latest/', apis.customer_get_latest_order),
+    path('api/customer/order/latest_status/', apis.customer_get_latest_order_status),
+    path('api/customer/driver/location/', apis.customer_get_driver_location),
+    path('api/customer/payment_intent/', apis.create_payment_intent),
+
+    # APIS for DRIVERS
+    path('api/driver/order/ready/', apis.driver_get_ready_orders),
+    path('api/driver/order/pick/', apis.driver_pick_order),
+    path('api/driver/order/latest/', apis.driver_get_latest_order),
+    path('api/driver/order/complete/', apis.driver_complete_order),
+    path('api/driver/revenue/', apis.driver_get_revenue),
+    path('api/driver/location/update/', apis.driver_update_location),
+    path('api/driver/profile/', apis.driver_get_profile),
+    path('api/driver/profile/update/', apis.driver_update_profile),
 ]
