@@ -42,8 +42,7 @@ class Driver(models.Model):
 
 
 class Item(models.Model):
-    business = models.ForeignKey(
-        Business, on_delete=models.CASCADE, related_name='business')
+    business = models.ForeignKey(Business, on_delete=models.CASCADE, related_name='business')
     name = models.CharField(max_length=255)
     description = models.TextField(max_length=500)
     image = CloudinaryField('image')

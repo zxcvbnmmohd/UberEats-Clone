@@ -84,7 +84,7 @@ extension BusinessViewController: UITableViewDataSource, UITableViewDelegate {
         if let image = item.image {
             Utils.loadImage(cell.foodImageView, "\(image)")
         }
-        print("CELLLLLLLL")
+        
         return cell
     }
     

@@ -145,9 +145,9 @@ import cloudinary.uploader
 import cloudinary.api
 
 cloudinary.config(
-    cloud_name = env('CLOUDINARY_NAME'),
-    api_key = env('CLOUDINARY_API_KEY'),
-    api_secret = env('CLOUDINARY_API_SECRET')
+    cloud_name = "mohp1416",
+    api_key = "316879618734751",
+    api_secret = "yZ-nDu07M3T1DV0yiJ6jl0RdjTw"
 )
 
 AUTHENTICATION_BACKENDS = (

@@ -75,6 +75,7 @@ def business_item(request):
 
 @login_required(login_url='/business/login/')
 def business_add_item(request):
+
     if request.method == "POST":
         item_form = ItemForm(request.POST, request.FILES)
 
@@ -85,7 +86,6 @@ def business_add_item(request):
             return redirect(business_item)
 
     item_form = ItemForm()
-
     return render(request, 'business/add_item.html', {
         "item_form": item_form
     })

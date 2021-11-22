@@ -40,6 +40,11 @@
 		50B48850274AFC8C00E8D1B3 /* 27630-credit-card-blue.json in Resources */ = {isa = PBXBuildFile; fileRef = 50B4884F274AFC8C00E8D1B3 /* 27630-credit-card-blue.json */; };
 		50B48852274B00E000E8D1B3 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48851274B00E000E8D1B3 /* CartTableViewCell.swift */; };
 		50B48854274B01D400E8D1B3 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48853274B01D400E8D1B3 /* CheckoutViewController.swift */; };
+		50B48858274C12CA00E8D1B3 /* OrderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48857274C12CA00E8D1B3 /* OrderTableViewCell.swift */; };
+		50B4885B274C137200E8D1B3 /* OrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4885A274C137200E8D1B3 /* OrdersViewController.swift */; };
+		50B4885E274C164700E8D1B3 /* ActiveOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4885D274C164700E8D1B3 /* ActiveOrderViewController.swift */; };
+		50B48860274C1D3600E8D1B3 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4885F274C1D3600E8D1B3 /* ProfileViewController.swift */; };
+		50B48862274C1D4200E8D1B3 /* EarningsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48861274C1D4200E8D1B3 /* EarningsViewController.swift */; };
 		98105DBAB735D8D6FF1251F8 /* Pods_UberEats_CloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75AE2E8E1EB8EB5942BBC6C /* Pods_UberEats_CloneTests.framework */; };
 		B5051D1019695154BF516049 /* Pods_UberEats_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD2947670606ACDDACB3FDE /* Pods_UberEats_Clone.framework */; };
 		F01DF35EB01585237A5E666D /* Pods_UberEats_Clone_UberEats_CloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199A634EA8199067833727A0 /* Pods_UberEats_Clone_UberEats_CloneUITests.framework */; };
@@ -102,6 +107,11 @@
 		50B4884F274AFC8C00E8D1B3 /* 27630-credit-card-blue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "27630-credit-card-blue.json"; sourceTree = "<group>"; };
 		50B48851274B00E000E8D1B3 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
 		50B48853274B01D400E8D1B3 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		50B48857274C12CA00E8D1B3 /* OrderTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderTableViewCell.swift; sourceTree = "<group>"; };
+		50B4885A274C137200E8D1B3 /* OrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersViewController.swift; sourceTree = "<group>"; };
+		50B4885D274C164700E8D1B3 /* ActiveOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveOrderViewController.swift; sourceTree = "<group>"; };
+		50B4885F274C1D3600E8D1B3 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		50B48861274C1D4200E8D1B3 /* EarningsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EarningsViewController.swift; sourceTree = "<group>"; };
 		85E4354C2DD09B097040F9AB /* Pods-UberEats-Clone-UberEats-CloneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberEats-Clone-UberEats-CloneUITests.release.xcconfig"; path = "Target Support Files/Pods-UberEats-Clone-UberEats-CloneUITests/Pods-UberEats-Clone-UberEats-CloneUITests.release.xcconfig"; sourceTree = "<group>"; };
 		89456868BD329DB058ADCF34 /* Pods-UberEats-Clone-UberEats-CloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberEats-Clone-UberEats-CloneUITests.debug.xcconfig"; path = "Target Support Files/Pods-UberEats-Clone-UberEats-CloneUITests/Pods-UberEats-Clone-UberEats-CloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8CD2947670606ACDDACB3FDE /* Pods_UberEats_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UberEats_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -232,12 +242,8 @@
 			isa = PBXGroup;
 			children = (
 				50B48828274AD7B000E8D1B3 /* WelcomeViewController.swift */,
-				50B48848274AFAFB00E8D1B3 /* ItemViewController.swift */,
-				50B48844274AFAB200E8D1B3 /* YourOrderViewController.swift */,
-				50B48846274AFAC400E8D1B3 /* CartViewController.swift */,
-				50B4884A274AFB3100E8D1B3 /* BusinessViewController.swift */,
-				50B4884C274AFB4B00E8D1B3 /* BusinessesViewController.swift */,
-				50B48853274B01D400E8D1B3 /* CheckoutViewController.swift */,
+				50B4885C274C137700E8D1B3 /* Driver */,
+				50B48859274C135E00E8D1B3 /* Customer */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -277,6 +283,7 @@
 				50B48824274AC53C00E8D1B3 /* BusinessTableViewCell.swift */,
 				50B48826274AC55100E8D1B3 /* ItemTableViewCell.swift */,
 				50B48851274B00E000E8D1B3 /* CartTableViewCell.swift */,
+				50B48857274C12CA00E8D1B3 /* OrderTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -309,6 +316,30 @@
 				50B4884F274AFC8C00E8D1B3 /* 27630-credit-card-blue.json */,
 			);
 			name = Animations;
+			sourceTree = "<group>";
+		};
+		50B48859274C135E00E8D1B3 /* Customer */ = {
+			isa = PBXGroup;
+			children = (
+				50B48848274AFAFB00E8D1B3 /* ItemViewController.swift */,
+				50B48844274AFAB200E8D1B3 /* YourOrderViewController.swift */,
+				50B48846274AFAC400E8D1B3 /* CartViewController.swift */,
+				50B4884A274AFB3100E8D1B3 /* BusinessViewController.swift */,
+				50B4884C274AFB4B00E8D1B3 /* BusinessesViewController.swift */,
+				50B48853274B01D400E8D1B3 /* CheckoutViewController.swift */,
+			);
+			name = Customer;
+			sourceTree = "<group>";
+		};
+		50B4885C274C137700E8D1B3 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				50B4885A274C137200E8D1B3 /* OrdersViewController.swift */,
+				50B4885D274C164700E8D1B3 /* ActiveOrderViewController.swift */,
+				50B4885F274C1D3600E8D1B3 /* ProfileViewController.swift */,
+				50B48861274C1D4200E8D1B3 /* EarningsViewController.swift */,
+			);
+			name = Driver;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -565,16 +596,21 @@
 				50B48827274AC55100E8D1B3 /* ItemTableViewCell.swift in Sources */,
 				50B48829274AD7B000E8D1B3 /* WelcomeViewController.swift in Sources */,
 				50B487E4274AB6AD00E8D1B3 /* AppDelegate.swift in Sources */,
+				50B48860274C1D3600E8D1B3 /* ProfileViewController.swift in Sources */,
 				50B48849274AFAFB00E8D1B3 /* ItemViewController.swift in Sources */,
 				50B487E6274AB6AD00E8D1B3 /* SceneDelegate.swift in Sources */,
 				50B4882F274AD91700E8D1B3 /* Utils.swift in Sources */,
 				50B48831274AD92400E8D1B3 /* FBManager.swift in Sources */,
+				50B4885E274C164700E8D1B3 /* ActiveOrderViewController.swift in Sources */,
 				50B4883B274AE13400E8D1B3 /* Business.swift in Sources */,
+				50B48858274C12CA00E8D1B3 /* OrderTableViewCell.swift in Sources */,
 				50B4883D274AE13C00E8D1B3 /* Item.swift in Sources */,
 				50B48854274B01D400E8D1B3 /* CheckoutViewController.swift in Sources */,
 				50B48835274AD94000E8D1B3 /* Constants.swift in Sources */,
+				50B4885B274C137200E8D1B3 /* OrdersViewController.swift in Sources */,
 				50B48841274AE3D300E8D1B3 /* CartItem.swift in Sources */,
 				50B48847274AFAC400E8D1B3 /* CartViewController.swift in Sources */,
+				50B48862274C1D4200E8D1B3 /* EarningsViewController.swift in Sources */,
 				50B4884D274AFB4B00E8D1B3 /* BusinessesViewController.swift in Sources */,
 				50B48839274AE12C00E8D1B3 /* User.swift in Sources */,
 			);
