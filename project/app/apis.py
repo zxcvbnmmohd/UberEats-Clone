@@ -32,12 +32,12 @@ def business_order_notification(request, last_request_time):
 # =========
 
 def customer_get_businesses(request):
-  businesss = BusinessSerializer(
+  businesses = BusinessSerializer(
     Business.objects.all().order_by("-id"),
     many=True,
     context={"request": request}
   ).data
-  return JsonResponse({"businesss": businesss})
+  return JsonResponse({"businesses": businesses})
 
 def customer_get_items(request, business_id):
   items = ItemSerializer(

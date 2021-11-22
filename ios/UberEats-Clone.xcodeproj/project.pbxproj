@@ -19,7 +19,7 @@
 		50B48820274AB7EA00E8D1B3 /* Philosopher-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B4881C274AB7B900E8D1B3 /* Philosopher-BoldItalic.ttf */; };
 		50B48821274AB7EA00E8D1B3 /* Philosopher-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B4881B274AB7B900E8D1B3 /* Philosopher-Italic.ttf */; };
 		50B48822274AB7EA00E8D1B3 /* Philosopher-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 50B4881A274AB7B900E8D1B3 /* Philosopher-Bold.ttf */; };
-		50B48825274AC53C00E8D1B3 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48824274AC53C00E8D1B3 /* RestaurantTableViewCell.swift */; };
+		50B48825274AC53C00E8D1B3 /* BusinessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48824274AC53C00E8D1B3 /* BusinessTableViewCell.swift */; };
 		50B48827274AC55100E8D1B3 /* ItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48826274AC55100E8D1B3 /* ItemTableViewCell.swift */; };
 		50B48829274AD7B000E8D1B3 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48828274AD7B000E8D1B3 /* WelcomeViewController.swift */; };
 		50B4882F274AD91700E8D1B3 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4882E274AD91700E8D1B3 /* Utils.swift */; };
@@ -32,6 +32,14 @@
 		50B4883D274AE13C00E8D1B3 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4883C274AE13C00E8D1B3 /* Item.swift */; };
 		50B4883F274AE14100E8D1B3 /* Cart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4883E274AE14100E8D1B3 /* Cart.swift */; };
 		50B48841274AE3D300E8D1B3 /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48840274AE3D300E8D1B3 /* CartItem.swift */; };
+		50B48845274AFAB200E8D1B3 /* YourOrderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48844274AFAB200E8D1B3 /* YourOrderViewController.swift */; };
+		50B48847274AFAC400E8D1B3 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48846274AFAC400E8D1B3 /* CartViewController.swift */; };
+		50B48849274AFAFB00E8D1B3 /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48848274AFAFB00E8D1B3 /* ItemViewController.swift */; };
+		50B4884B274AFB3100E8D1B3 /* BusinessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4884A274AFB3100E8D1B3 /* BusinessViewController.swift */; };
+		50B4884D274AFB4B00E8D1B3 /* BusinessesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B4884C274AFB4B00E8D1B3 /* BusinessesViewController.swift */; };
+		50B48850274AFC8C00E8D1B3 /* 27630-credit-card-blue.json in Resources */ = {isa = PBXBuildFile; fileRef = 50B4884F274AFC8C00E8D1B3 /* 27630-credit-card-blue.json */; };
+		50B48852274B00E000E8D1B3 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48851274B00E000E8D1B3 /* CartTableViewCell.swift */; };
+		50B48854274B01D400E8D1B3 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50B48853274B01D400E8D1B3 /* CheckoutViewController.swift */; };
 		98105DBAB735D8D6FF1251F8 /* Pods_UberEats_CloneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E75AE2E8E1EB8EB5942BBC6C /* Pods_UberEats_CloneTests.framework */; };
 		B5051D1019695154BF516049 /* Pods_UberEats_Clone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CD2947670606ACDDACB3FDE /* Pods_UberEats_Clone.framework */; };
 		F01DF35EB01585237A5E666D /* Pods_UberEats_Clone_UberEats_CloneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 199A634EA8199067833727A0 /* Pods_UberEats_Clone_UberEats_CloneUITests.framework */; };
@@ -73,7 +81,7 @@
 		50B4881B274AB7B900E8D1B3 /* Philosopher-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Philosopher-Italic.ttf"; sourceTree = "<group>"; };
 		50B4881C274AB7B900E8D1B3 /* Philosopher-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Philosopher-BoldItalic.ttf"; sourceTree = "<group>"; };
 		50B4881D274AB7B900E8D1B3 /* Philosopher-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Philosopher-Regular.ttf"; sourceTree = "<group>"; };
-		50B48824274AC53C00E8D1B3 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
+		50B48824274AC53C00E8D1B3 /* BusinessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessTableViewCell.swift; sourceTree = "<group>"; };
 		50B48826274AC55100E8D1B3 /* ItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTableViewCell.swift; sourceTree = "<group>"; };
 		50B48828274AD7B000E8D1B3 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		50B4882E274AD91700E8D1B3 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
@@ -86,6 +94,14 @@
 		50B4883C274AE13C00E8D1B3 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		50B4883E274AE14100E8D1B3 /* Cart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cart.swift; sourceTree = "<group>"; };
 		50B48840274AE3D300E8D1B3 /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		50B48844274AFAB200E8D1B3 /* YourOrderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourOrderViewController.swift; sourceTree = "<group>"; };
+		50B48846274AFAC400E8D1B3 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		50B48848274AFAFB00E8D1B3 /* ItemViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		50B4884A274AFB3100E8D1B3 /* BusinessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessViewController.swift; sourceTree = "<group>"; };
+		50B4884C274AFB4B00E8D1B3 /* BusinessesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusinessesViewController.swift; sourceTree = "<group>"; };
+		50B4884F274AFC8C00E8D1B3 /* 27630-credit-card-blue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "27630-credit-card-blue.json"; sourceTree = "<group>"; };
+		50B48851274B00E000E8D1B3 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		50B48853274B01D400E8D1B3 /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
 		85E4354C2DD09B097040F9AB /* Pods-UberEats-Clone-UberEats-CloneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberEats-Clone-UberEats-CloneUITests.release.xcconfig"; path = "Target Support Files/Pods-UberEats-Clone-UberEats-CloneUITests/Pods-UberEats-Clone-UberEats-CloneUITests.release.xcconfig"; sourceTree = "<group>"; };
 		89456868BD329DB058ADCF34 /* Pods-UberEats-Clone-UberEats-CloneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberEats-Clone-UberEats-CloneUITests.debug.xcconfig"; path = "Target Support Files/Pods-UberEats-Clone-UberEats-CloneUITests/Pods-UberEats-Clone-UberEats-CloneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8CD2947670606ACDDACB3FDE /* Pods_UberEats_Clone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UberEats_Clone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -171,6 +187,7 @@
 		50B487E2274AB6AD00E8D1B3 /* UberEats-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				50B4884E274AFC6E00E8D1B3 /* Animations */,
 				50B48819274AB78200E8D1B3 /* Assets */,
 				50B48823274AC50F00E8D1B3 /* Cells */,
 				50B48816274AB75A00E8D1B3 /* Configs */,
@@ -215,6 +232,12 @@
 			isa = PBXGroup;
 			children = (
 				50B48828274AD7B000E8D1B3 /* WelcomeViewController.swift */,
+				50B48848274AFAFB00E8D1B3 /* ItemViewController.swift */,
+				50B48844274AFAB200E8D1B3 /* YourOrderViewController.swift */,
+				50B48846274AFAC400E8D1B3 /* CartViewController.swift */,
+				50B4884A274AFB3100E8D1B3 /* BusinessViewController.swift */,
+				50B4884C274AFB4B00E8D1B3 /* BusinessesViewController.swift */,
+				50B48853274B01D400E8D1B3 /* CheckoutViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -251,8 +274,9 @@
 		50B48823274AC50F00E8D1B3 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				50B48824274AC53C00E8D1B3 /* RestaurantTableViewCell.swift */,
+				50B48824274AC53C00E8D1B3 /* BusinessTableViewCell.swift */,
 				50B48826274AC55100E8D1B3 /* ItemTableViewCell.swift */,
+				50B48851274B00E000E8D1B3 /* CartTableViewCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -277,6 +301,14 @@
 				50B48830274AD92400E8D1B3 /* FBManager.swift */,
 			);
 			name = Manager;
+			sourceTree = "<group>";
+		};
+		50B4884E274AFC6E00E8D1B3 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				50B4884F274AFC8C00E8D1B3 /* 27630-credit-card-blue.json */,
+			);
+			name = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -389,6 +421,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				50B48822274AB7EA00E8D1B3 /* Philosopher-Bold.ttf in Resources */,
+				50B48850274AFC8C00E8D1B3 /* 27630-credit-card-blue.json in Resources */,
 				50B487F0274AB6B000E8D1B3 /* LaunchScreen.storyboard in Resources */,
 				50B48820274AB7EA00E8D1B3 /* Philosopher-BoldItalic.ttf in Resources */,
 				50B487ED274AB6B000E8D1B3 /* Assets.xcassets in Resources */,
@@ -522,20 +555,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50B48852274B00E000E8D1B3 /* CartTableViewCell.swift in Sources */,
 				50B48837274AE12400E8D1B3 /* DriverOrder.swift in Sources */,
 				50B48833274AD93000E8D1B3 /* APIManager.swift in Sources */,
-				50B48825274AC53C00E8D1B3 /* RestaurantTableViewCell.swift in Sources */,
+				50B48825274AC53C00E8D1B3 /* BusinessTableViewCell.swift in Sources */,
+				50B4884B274AFB3100E8D1B3 /* BusinessViewController.swift in Sources */,
 				50B4883F274AE14100E8D1B3 /* Cart.swift in Sources */,
+				50B48845274AFAB200E8D1B3 /* YourOrderViewController.swift in Sources */,
 				50B48827274AC55100E8D1B3 /* ItemTableViewCell.swift in Sources */,
 				50B48829274AD7B000E8D1B3 /* WelcomeViewController.swift in Sources */,
 				50B487E4274AB6AD00E8D1B3 /* AppDelegate.swift in Sources */,
+				50B48849274AFAFB00E8D1B3 /* ItemViewController.swift in Sources */,
 				50B487E6274AB6AD00E8D1B3 /* SceneDelegate.swift in Sources */,
 				50B4882F274AD91700E8D1B3 /* Utils.swift in Sources */,
 				50B48831274AD92400E8D1B3 /* FBManager.swift in Sources */,
 				50B4883B274AE13400E8D1B3 /* Business.swift in Sources */,
 				50B4883D274AE13C00E8D1B3 /* Item.swift in Sources */,
+				50B48854274B01D400E8D1B3 /* CheckoutViewController.swift in Sources */,
 				50B48835274AD94000E8D1B3 /* Constants.swift in Sources */,
 				50B48841274AE3D300E8D1B3 /* CartItem.swift in Sources */,
+				50B48847274AFAC400E8D1B3 /* CartViewController.swift in Sources */,
+				50B4884D274AFB4B00E8D1B3 /* BusinessesViewController.swift in Sources */,
 				50B48839274AE12C00E8D1B3 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -724,6 +764,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -753,6 +794,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

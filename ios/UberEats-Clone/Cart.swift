@@ -10,7 +10,7 @@ import Foundation
 class Cart {
     static let currentCart = Cart()
     
-    var restaurant: Restaurant?
+    var business: Business?
     var items = [CartItem]()
     var address: String?
     
@@ -31,7 +31,7 @@ class Cart {
     }
     
     func reset() {
-        self.restaurant = nil
+        self.business = nil
         self.address = nil
         self.items = []
     }

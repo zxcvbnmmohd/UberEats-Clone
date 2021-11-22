@@ -140,13 +140,13 @@ class APIManager {
     
     // API to fetch all business
     func getBusinesses(completionHandler: @escaping(JSON?) -> Void) {
-        let path = "api/customer/restaurants/"
+        let path = "api/customer/businesses/"
         requestServer(.get, path, nil, JSONEncoding.default, completionHandler)
     }
     
     // API to fetch all items of a business
-    func getItems(restaurantId: Int, completionHandler: @escaping(JSON?) -> Void) {
-        let path = "api/customer/meals/\(restaurantId)"
+    func getItems(businessId: Int, completionHandler: @escaping(JSON?) -> Void) {
+        let path = "api/customer/items/\(businessId)"
         requestServer(.get, path, nil, JSONEncoding.default, completionHandler)
     }
     
@@ -180,7 +180,7 @@ class APIManager {
                 
                 let params: [String: Any] = [
                     "access_token": self.accessToken,
-                    "restaurant_id": Cart.currentCart.restaurant!.id!,
+                    "business_id": Cart.currentCart.business!.id!,
                     "order_details": dataString,
                     "address": Cart.currentCart.address!
                 ]

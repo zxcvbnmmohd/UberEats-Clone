@@ -36,7 +36,7 @@ urlpatterns = [
     path('business/reports/', views.business_reports, name='business_reports'),
     
     # APIs
-    path('api/social', include('rest_framework_social_oauth2.urls')),
+    path('api/social/', include('rest_framework_social_oauth2.urls')),
     path('api/business/order/notification/<last_request_time>/', apis.business_order_notification),
     
      # APIS for CUSTOMERS

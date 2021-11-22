@@ -1,5 +1,5 @@
 //
-//  ItemTableViewCell.swift
+//  CartTableViewCell.swift
 //  UberEats-Clone
 //
 //  Created by Mohamed Mohamed on 2021-11-21.
@@ -7,12 +7,11 @@
 
 import UIKit
 
-class ItemTableViewCell: UITableViewCell {
+class CartTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    @IBOutlet weak var foodImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

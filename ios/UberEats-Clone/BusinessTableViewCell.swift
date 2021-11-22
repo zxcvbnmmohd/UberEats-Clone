@@ -7,8 +7,12 @@
 
 import UIKit
 
-class RestaurantTableViewCell: UITableViewCell {
+class BusinessTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var imageIV: UIImageView!
+    @IBOutlet weak var nameLabe: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
