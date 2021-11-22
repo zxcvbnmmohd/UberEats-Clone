@@ -113,7 +113,7 @@ def business_order(request):
     if request.method == "POST":
         order = Order.objects.get(id=request.POST["id"])
 
-        if order.status == Order.COOKING:
+        if order.status == Order.PREPARING:
             order.status = Order.READY
             order.save()
 

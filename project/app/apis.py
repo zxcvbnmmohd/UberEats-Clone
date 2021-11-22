@@ -97,7 +97,7 @@ def customer_add_order(request):
         customer = customer,
         business_id = request.POST["business_id"],
         total = order_total,
-        status = Order.COOKING,
+        status = Order.PREPARING,
         address = request.POST["address"]
       )
 

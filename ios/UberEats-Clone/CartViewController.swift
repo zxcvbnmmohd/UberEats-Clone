@@ -12,13 +12,37 @@ class CartViewController: UIViewController {
     
     var locationManager = CLLocationManager()
     
+    @IBOutlet weak var checkoutButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var addressTF: UITextField!
     @IBOutlet weak var map: MKMapView!
     
     @IBAction func closeButton(_ sender: Any) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func checkoutButton(_ sender: Any) {
+        if self.addressTF.text == "" {
+            // Show alert that this field is required
+            let alertController = UIAlertController(
+                title: "No Address",
+                message: "Address is required",
+                preferredStyle: .alert
+            )
+            
+            let okAction = UIAlertAction(title: "OK", style: .default) { alert in
+                self.addressTF.becomeFirstResponder()
+            }
+            
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        } else {
+            Cart.currentCart.address = addressTF.text
+            self.performSegue(withIdentifier: "toCheckoutVIew", sender: self)
+        }
     }
     
     override func viewDidLoad() {
@@ -27,7 +51,12 @@ class CartViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         if Cart.currentCart.items.count == 0 {
-            // Show a message
+            
+            self.checkoutButton.isHidden = true
+            self.tableView.isHidden = true
+            self.stackView.isHidden = true
+            self.map.isHidden = true
+            
             let labelMessage = UILabel(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 40))
             labelMessage.center = self.view.center
             labelMessage.textAlignment =  NSTextAlignment.center
@@ -35,12 +64,10 @@ class CartViewController: UIViewController {
             self.view.addSubview(labelMessage)
             
         } else {
-            // Display all of the UI controllers
-            //            self.tableViewCart.isHidden = false
-            //            self.viewTotal.isHidden = false
-            //            self.viewAddress.isHidden = false
-            //            self.map.isHidden = false
-            //            self.buttonCheckout.isHidden = false
+            self.checkoutButton.isHidden = false
+            self.tableView.isHidden = false
+            self.stackView.isHidden = false
+            self.map.isHidden = false
             
             self.fetchItems()
         }
@@ -57,8 +84,8 @@ class CartViewController: UIViewController {
     }
     
     func fetchItems() {
-        self.totalLabel.text = "$\(Cart.currentCart.getTotalValue())"
         self.tableView.reloadData()
+        self.totalLabel.text = "$\(Cart.currentCart.getTotalValue())"
     }
     
 }
@@ -130,6 +157,11 @@ extension CartViewController: UITableViewDataSource, UITableViewDelegate {
         cell.priceLabel.text = "$\(item.item.price! * Float(item.qty))"
         
         return cell
+    }
+    
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 50.0;
     }
 }
 
